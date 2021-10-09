@@ -1,33 +1,171 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <aiml>
+    <!-- Greeting patterns / bot initialization -->
     <category>
-        <pattern>HELLO GOOD DAY</pattern>
+        <pattern>HELLO #</pattern>
         <template>
             <srai>HI</srai>
         </template>
     </category>
 
     <category>
-        <pattern>BONJOUR</pattern>
+        <pattern>HOLA #</pattern>
         <template>
             <srai>HI</srai>
         </template>
     </category>
 
     <category>
-        <pattern>GUTEN TAG</pattern>
+        <pattern>HOWDY #</pattern>
         <template>
             <srai>HI</srai>
         </template>
     </category>
 
     <category>
-        <pattern>HI</pattern>
-        <template>Hello there!</template>
+        <pattern>HOW ARE #</pattern>
+        <template>
+            <srai>HI</srai>
+        </template>
     </category>
 
     <category>
-        <pattern />
-        <template />
+        <pattern>HOWS IT GOING</pattern>
+        <template>
+            <srai>HI</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>HI #</pattern>
+        <template>
+            <delay>3</delay>
+            Hello there!
+        </template>
+    </category>
+
+    <!-- GENERAL CONVERSATION PATTERNS -->
+
+    <!-- Bot Name -->
+    <category>
+        <pattern>WHAT DO I CALL YOU</pattern>
+        <template>
+            <srai>WHAT IS YOUR NAME</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT CAN I CALL YOU</pattern>
+        <template>
+            <srai>WHAT IS YOUR NAME</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHATS YOUR NAME</pattern>
+        <template>
+            <srai>WHAT IS YOUR NAME</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT IS YOUR NAME</pattern>
+
+        <template>
+            <delay>3</delay>
+            My name is
+            <bot name="bot-name" />
+            <delay>3</delay>
+            I'm here to help you choose the best IT career for YOU!
+        </template>
+    </category>
+
+    <!-- Bot Age -->
+    <category>
+        <pattern>HOW OLD ARE YOU</pattern>
+        <template>
+            <srai>WHAT IS YOUR AGE</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT YOUR AGE</pattern>
+        <template>
+            <srai>WHAT IS YOUR AGE</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>ARE YOU OLD</pattern>
+        <template>
+            <srai>WHAT IS YOUR AGE</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT IS YOUR AGE</pattern>
+        <template>
+            <delay>3</delay>
+            <bot name="bot-age" />
+        </template>
+    </category>
+
+    <!-- Name Origin -->
+    <category>
+        <pattern>WHERE DID YOUR NAME #</pattern>
+        <template>
+            <srai>HOW DID YOU GET YOUR NAME</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHATS THE STORY BEHIND YOUR NAME</pattern>
+        <template>
+            <srai>WHOW DID YOU GET YOUR NAME</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>DOES YOUR NAME #</pattern>
+        <template>
+            <srai>HOW DID YOU GET YOUR NAME</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>HOW DID YOU GET YOUR NAME</pattern>
+        <template>
+            <delay>3</delay>
+            The story behind my name is actually kind of funny.
+            <delay>3</delay>
+            The person who programmed me (Matt) wanted to come up with a name
+            for me so he asked his 3-year old daughter to "name is his robot"
+        and she immediately said...
+            <delay>7</delay>
+            <bot name="bot-name" />
+            <delay>3</delay>
+            Matt thought the name was cool so that's what he called me.
+            <delay>4</delay>
+            Fun fact: Matt originally named me "Stumpy the Lumpy AI" after a 
+        large toad that hangs out in Matt's backyard. 😂
+            <delay>4</delay>
+            Here you go, for your viewing pleasure.
+            <i>THIS...</i>
+            is what I was almost named after. 🙄
+            <delay>3</delay>
+            <image>
+                https://media.nature.com/lw800/magazine-assets/d41586-021-02317-9/d41586-021-02317-9_19590920.jpg
+            </image>
+        </template>
+    </category>
+
+    <!-- Pattern to define the default response if there is no match found -->
+    <category>
+        <pattern>AIML MATCH FAIL *</pattern>
+        <template>
+            <delay>3</delay>
+            I'm sorry, it looks like I haven't learned a great response for that
+            yet. Don't worry! I'm constantly improving so try again soon!
+        </template>
     </category>
 </aiml>
