@@ -1,11 +1,33 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <aiml>
-  <category>
-    <pattern>*</pattern>
-    <template>I have no answer for that.</template>
-  </category>
-<category>
-    <pattern></pattern>
-    <template></template>
-</category>
+    <category>
+        <pattern>HELLO GOOD DAY</pattern>
+        <template>
+            <srai>HI</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>BONJOUR</pattern>
+        <template>
+            <srai>HI</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>GUTEN TAG</pattern>
+        <template>
+            <srai>HI</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>HI</pattern>
+        <template>Hello there!</template>
+    </category>
+
+    <category>
+        <pattern />
+        <template />
+    </category>
 </aiml>
