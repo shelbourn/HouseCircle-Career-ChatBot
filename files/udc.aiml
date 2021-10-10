@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <aiml>
-    <!-- Greeting patterns / bot initialization -->
+    <!-- GREETING PATTERNS / BOT INITIALIZATION -->
     <category>
         <pattern>HELLO #</pattern>
         <template>
@@ -82,12 +82,62 @@
             </random>
             <delay>3</delay>
             <random>
-                <li>May I have your name please so I know what to call you?</li>
                 <li>
                     Would you mind telling me your name for our conversation?
                 </li>
                 <li>May I have your name please?</li>
+                <li>May I have your name please so I know what to call you?</li>
             </random>
+        </template>
+    </category>
+
+    <!-- Assignment of user name variable -->
+
+    <category>
+        <pattern>MY NAME IS *</pattern>
+        <that>
+            LT DELAY GT 3 LT SLASH DELAY GT
+        MAY I HAVE YOUR NAME PLEASE
+        </that>
+        <that>
+            LT DELAY GT 3 LT SLASH DELAY GT
+        WOULD YOU MIND TELLING ME YOUR NAME FOR OUR CONVERSATION
+        </that>
+        <that>
+            LT DELAY GT 3 LT SLASH DELAY GT
+        MAY I HAVE YOUR NAME PLEASE SO I KNOW WHAT TO CALL YOU
+        </that>
+        <template>
+            <delay>3</delay>
+            It's a pleasure to meet you,
+            <set name="user-name">
+                <star />
+            </set>
+            !
+        </template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>
+            LT DELAY GT 3 LT SLASH DELAY GT
+        MAY I HAVE YOUR NAME PLEASE
+        </that>
+        <that>
+            LT DELAY GT 3 LT SLASH DELAY GT
+        WOULD YOU MIND TELLING ME YOUR NAME FOR OUR CONVERSATION
+        </that>
+        <that>
+            LT DELAY GT 3 LT SLASH DELAY GT
+        MAY I HAVE YOUR NAME PLEASE SO I KNOW WHAT TO CALL YOU
+        </that>
+        <template>
+            <delay>3</delay>
+            It's a pleasure to meet you,
+            <set name="user-name">
+                <star />
+            </set>
+            ! 👋
         </template>
     </category>
 
@@ -117,7 +167,6 @@
 
     <category>
         <pattern>WHAT IS YOUR NAME</pattern>
-
         <template>
             <delay>3</delay>
             My name is
