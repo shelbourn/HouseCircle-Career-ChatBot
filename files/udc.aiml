@@ -40,7 +40,54 @@
         <pattern>HI #</pattern>
         <template>
             <delay>3</delay>
-            Hello there!
+            <random>
+                <li>Hello there!</li>
+                <li>Hi there!</li>
+                <li>Hello!</li>
+                <li>Hi!</li>
+                <li>Howdy!</li>
+            </random>
+            <delay>3</delay>
+            <random>
+                <li>How are you today?</li>
+                <li>How's it going?</li>
+                <li>How's your day going?</li>
+                <li>How are you?</li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern># GOOD #</pattern>
+        <template>
+            <srai>I'm doing well</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># FINE #</pattern>
+        <template>
+            <srai>I'm doing well</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># WELL #</pattern>
+        <template>
+            <delay>3</delay>
+            <random>
+                <li>Awesome! That's great to hear!</li>
+                <li>Fantastic! I'm so happy to hear that! 😀</li>
+                <li>That's great! I'm glad you're well.</li>
+            </random>
+            <delay>3</delay>
+            <random>
+                <li>May I have your name please so I know what to call you?</li>
+                <li>
+                    Would you mind telling me your name for our conversation?
+                </li>
+                <li>May I have your name please?</li>
+            </random>
         </template>
     </category>
 
@@ -133,6 +180,13 @@
     </category>
 
     <category>
+        <pattern>IS YOUR NAME #</pattern>
+        <template>
+            <srai>HOW DID YOU GET YOUR NAME</srai>
+        </template>
+    </category>
+
+    <category>
         <pattern>HOW DID YOU GET YOUR NAME</pattern>
         <template>
             <delay>3</delay>
@@ -148,11 +202,12 @@
             <delay>4</delay>
             Fun fact: Matt originally named me "Stumpy the Lumpy AI" after a 
         large toad that hangs out in Matt's backyard. 😂
-            <delay>4</delay>
+            <delay>5</delay>
             Here you go, for your viewing pleasure.
+            <delay>3</delay>
             <i>THIS...</i>
             is what I was almost named after. 🙄
-            <delay>3</delay>
+            <delay>4</delay>
             <image>
                 https://media.nature.com/lw800/magazine-assets/d41586-021-02317-9/d41586-021-02317-9_19590920.jpg
             </image>
@@ -164,8 +219,43 @@
         <pattern>AIML MATCH FAIL *</pattern>
         <template>
             <delay>3</delay>
-            I'm sorry, it looks like I haven't learned a great response for that
-            yet. Don't worry! I'm constantly improving so try again soon!
+            <random>
+                <li>
+                    I'm sorry, it looks like I haven't learned a great response
+                    for that yet.
+                </li>
+                <li>Oh no! I don't know how to respond to that yet!</li>
+                <li>Bummer! I don't really know how to respond to that.</li>
+                <li>
+                    Yikes! I guess I missed that day of AI ChatBot training
+                    because I don't know how to respond to that.
+                </li>
+            </random>
+            <delay>3</delay>
+            Don't worry! I'm constantly improving so try again soon!
+            <delay>3</delay>
+            <random>
+                <li>
+                    <image>
+                        https://media.giphy.com/media/8dYmJ6Buo3lYY/giphy.gif
+                    </image>
+                </li>
+                <li>
+                    <image>
+                        https://media.giphy.com/media/d9TIXOKaA6HFm/giphy.gif
+                    </image>
+                </li>
+                <li>
+                    <image>
+                        https://media.giphy.com/media/tHufwMDTUi20E/giphy.gif
+                    </image>
+                </li>
+                <li>
+                    <image>
+                        https://media.giphy.com/media/UuZRzEoqTlV9yzooAZ/giphy.gif
+                    </image>
+                </li>
+            </random>
         </template>
     </category>
 </aiml>
