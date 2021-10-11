@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <aiml>
-    <!-- Greeting patterns / bot initialization -->
+    <!-- GREETING PATTERNS / BOT INITIALIZATION -->
     <category>
         <pattern>HELLO #</pattern>
         <template>
@@ -82,12 +82,62 @@
             </random>
             <delay>3</delay>
             <random>
-                <li>May I have your name please so I know what to call you?</li>
                 <li>
                     Would you mind telling me your name for our conversation?
                 </li>
                 <li>May I have your name please?</li>
+                <li>May I have your name please so I know what to call you?</li>
             </random>
+        </template>
+    </category>
+
+    <!-- Assignment of user name variable -->
+
+    <category>
+        <pattern>MY NAME IS *</pattern>
+        <that>
+            LT DELAY GT 3 LT SLASH DELAY GT
+        MAY I HAVE YOUR NAME PLEASE
+        </that>
+        <that>
+            LT DELAY GT 3 LT SLASH DELAY GT
+        WOULD YOU MIND TELLING ME YOUR NAME FOR OUR CONVERSATION
+        </that>
+        <that>
+            LT DELAY GT 3 LT SLASH DELAY GT
+        MAY I HAVE YOUR NAME PLEASE SO I KNOW WHAT TO CALL YOU
+        </that>
+        <template>
+            <delay>3</delay>
+            It's a pleasure to meet you,
+            <set name="user-name">
+                <star />
+            </set>
+            !
+        </template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>
+            LT DELAY GT 3 LT SLASH DELAY GT
+        MAY I HAVE YOUR NAME PLEASE
+        </that>
+        <that>
+            LT DELAY GT 3 LT SLASH DELAY GT
+        WOULD YOU MIND TELLING ME YOUR NAME FOR OUR CONVERSATION
+        </that>
+        <that>
+            LT DELAY GT 3 LT SLASH DELAY GT
+        MAY I HAVE YOUR NAME PLEASE SO I KNOW WHAT TO CALL YOU
+        </that>
+        <template>
+            <delay>3</delay>
+            It's a pleasure to meet you,
+            <set name="user-name">
+                <star />
+            </set>
+            ! 👋
         </template>
     </category>
 
@@ -135,7 +185,6 @@
         </template>
     </category>
 
-    <!-- Name Origin -->
     <category>
         <pattern>WHAT YOUR AGE</pattern>
         <template>
@@ -209,13 +258,17 @@
             <i>THIS...</i>
             is what I was almost named after. 🙄
             <delay>4</delay>
+            <!-- Insert citation here -->
             <image>
                 https://media.nature.com/lw800/magazine-assets/d41586-021-02317-9/d41586-021-02317-9_19590920.jpg
             </image>
         </template>
     </category>
 
-    <!-- Pattern to define the default response if there is no match found -->
+    <!-- PATTERNS FOR CAREER PATH RECOMMENDATIONS -->
+
+    <!-- PATTERN TO DEFINE THE DEFAULT RESPONSE IF THERE IS NO MATCH FOUND -->
+
     <category>
         <pattern>AIML MATCH FAIL *</pattern>
         <template>
@@ -235,6 +288,7 @@
             <delay>3</delay>
             Don't worry! I'm constantly improving so try again soon!
             <delay>3</delay>
+            <!-- Insert citation for Giphy here -->
             <random>
                 <li>
                     <image>
