@@ -199,6 +199,8 @@
 
     <!-- PATTERNS FOR CAREER PATH RECOMMENDATIONS -->
 
+    <!-- Initiate career path recommendation patterns -->
+
     <category>
         <pattern># SURE #</pattern>
         <that>WOULD YOU LIKE TO GET STARTED</that>
@@ -231,7 +233,7 @@
             Fantastic! Let's go for it!
             <delay>3</delay>
             I understand that you are interested in the field of Information
-            Technology, is that correct?
+            Technology. Is that correct?
         </template>
     </category>
 
@@ -263,8 +265,192 @@
             If you're bored and curious you can ask me things like "What is your
             name?", "How old are you?", or "How did you get your name?"
             <delay>5</delay>
-            Or you can simply end this chat by saying "End", "End Chat" or
+            Or you can end this chat simply by saying "End", "End Chat" or
             something similar.
+            <delay>4</delay>
+            For your reference, if you change your mind and would like to chat
+            about IT-related education tracks then you can simply say
+        "Let's get started." or something similar.
+        </template>
+    </category>
+
+    <!-- Initiate career path recommendation patterns from any point in the chat session -->
+
+    <category>
+        <pattern># STARTED #</pattern>
+        <template>
+            <srai>Start</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># BEGIN #</pattern>
+        <template>
+            <srai>Start</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># GOING #</pattern>
+        <template>
+            <srai>Start</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># START #</pattern>
+        <template>
+            <delay>3</delay>
+            Awesome! Let's do this!
+            <delay>3</delay>
+            <condition name="user-name">
+                <li value="unknown">
+                    I didn't catch your name yet.
+                    <delay>2</delay>
+                    I'll need it so I know how to refer to you during our little
+                    chat. May I have your name please?
+                </li>
+                <li>
+                    So
+                    <get name="user-name" />
+                    , I understand that you are interested in the field of
+                    Information Technology.
+                Is that correct?
+                </li>
+            </condition>
+        </template>
+    </category>
+
+    <!-- Entry point into patterns for IT education track recommendations -->
+    <category>
+        <pattern># SURE #</pattern>
+        <that>IS THAT CORRECT</that>
+        <template>
+            <srai>Yes</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># YEAH #</pattern>
+        <that>IS THAT CORRECT</that>
+        <template>
+            <srai>Yes</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># YAH #</pattern>
+        <that>IS THAT CORRECT</that>
+        <template>
+            <srai>Yes</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># OKAY #</pattern>
+        <that>IS THAT CORRECT</that>
+        <template>
+            <srai>Yes</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># YES #</pattern>
+        <that>IS THAT CORRECT</that>
+        <template>
+            <delay>3</delay>
+            Awesome!
+            <delay>2</delay>
+            That's a great field to pursue.
+            <delay>2</delay>
+            IT has several career options, most are in high demand, and pay
+            handsomely. 🙌
+            <delay>3</delay>
+            I will do my best to guide you into the best IT-related education
+            track for you.
+            <delay>3</delay>
+            Let's get the ball rolling. First question, do you enjoy
+            programming?
+        </template>
+    </category>
+
+    <!-- Programming-related career fields -->
+    <category>
+        <pattern># SURE #</pattern>
+        <that>FIRST QUESTION DO YOU ENJOY PROGRAMMING</that>
+        <template>
+            <srai>Yes</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># YEAH #</pattern>
+        <that>FIRST QUESTION DO YOU ENJOY PROGRAMMING</that>
+        <template>
+            <srai>Yes</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># YAH #</pattern>
+        <that>FIRST QUESTION DO YOU ENJOY PROGRAMMING</that>
+        <template>
+            <srai>Yes</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># YES #</pattern>
+        <that>FIRST QUESTION DO YOU ENJOY PROGRAMMING</that>
+        <template>
+            <delay>3</delay>
+            Nice!
+            <delay>2</delay>
+            I can't say that I know how to code, but I sure do appreciate the
+            fact that someone took the time to
+        program me. 😋
+            <delay>5</delay>
+        </template>
+    </category>
+
+    <!-- No entry into education track recommendation patterns due to user declining -->
+    <category>
+        <pattern># NOPE #</pattern>
+        <that>IS THAT CORRECT</that>
+        <template>
+            <srai>No</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># NAH #</pattern>
+        <that>IS THAT CORRECT</that>
+        <template>
+            <srai>No</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># NO #</pattern>
+        <that>IS THAT CORRECT</that>
+        <template>
+            <delay>3</delay>
+            Oh, my mistake.
+            <delay>2</delay>
+            I don't think there is much that I can help you with then,
+            unfortunately.
+            <delay>4</delay>
+            I am specifically designed to help prospective students select the
+            best IT-related education track for them.
+            <delay>4</delay>
+            I apologize for the inconvenience.
+            <delay>2</delay>
+            If you're bored and curious you can ask me things like "What is your
+            name?", "How old are you?", or "How did you get your name?"
+            <delay>5</delay>
+            Or you can end this chat simply by saying "End", "End Chat" or
+            something similar.
+            <delay>4</delay>
         </template>
     </category>
 
@@ -294,7 +480,6 @@
 
     <category>
         <pattern>WHAT IS YOUR NAME</pattern>
-
         <template>
             <delay>3</delay>
             My name is
