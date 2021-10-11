@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <aiml>
+    <!-- BOT STYLING?? -->
+
     <!-- GREETING PATTERNS / BOT INITIALIZATION -->
     <category>
         <pattern>HELLO #</pattern>
@@ -72,6 +74,13 @@
     </category>
 
     <category>
+        <pattern># OKAY #</pattern>
+        <template>
+            <srai>I'm doing well</srai>
+        </template>
+    </category>
+
+    <category>
         <pattern># WELL #</pattern>
         <template>
             <delay>3</delay>
@@ -81,13 +90,64 @@
                 <li>That's great! I'm glad you're well.</li>
             </random>
             <delay>3</delay>
+            First thing's first. May I have your name please?
+        </template>
+    </category>
+
+    <category>
+        <pattern># BAD #</pattern>
+        <template>
+            <srai>I'm doing bad</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># NOT WELL #</pattern>
+        <template>
+            <srai>I'm doing bad</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># NOT GREAT #</pattern>
+        <template>
+            <srai>I'm doing bad</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># HORRIBLE #</pattern>
+        <template>
+            <srai>I'm doing bad</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># AWFUL #</pattern>
+        <template>
+            <srai>I'm doing bad</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># BAD #</pattern>
+        <template>
+            <delay>3</delay>
             <random>
                 <li>
-                    Would you mind telling me your name for our conversation?
+                    Oh no! I'm sorry to hear that. I'll try to cheer you up. 😁
                 </li>
-                <li>May I have your name please?</li>
-                <li>May I have your name please so I know what to call you?</li>
+                <li>
+                    That's a bummer, I'm sorry to hear that. Maybe I can help
+                    you feel a bit better. 😀
+                </li>
+                <li>
+                    I'm sorry to hear that, but I think I can make you feel a
+                    bit better. 😄
+                </li>
             </random>
+            <delay>3</delay>
+            First thing's first. May I have your name please?
         </template>
     </category>
 
@@ -95,49 +155,116 @@
 
     <category>
         <pattern>MY NAME IS *</pattern>
-        <that>
-            LT DELAY GT 3 LT SLASH DELAY GT
-        MAY I HAVE YOUR NAME PLEASE
-        </that>
-        <that>
-            LT DELAY GT 3 LT SLASH DELAY GT
-        WOULD YOU MIND TELLING ME YOUR NAME FOR OUR CONVERSATION
-        </that>
-        <that>
-            LT DELAY GT 3 LT SLASH DELAY GT
-        MAY I HAVE YOUR NAME PLEASE SO I KNOW WHAT TO CALL YOU
-        </that>
+        <that>MAY I HAVE YOUR NAME PLEASE</that>
         <template>
             <delay>3</delay>
             It's a pleasure to meet you,
             <set name="user-name">
-                <star />
+                <sentence>
+                    <star />
+                </sentence>
             </set>
-            !
+            ! 👋
+            <delay>3</delay>
+            My goal is to help match you with the best IT educational track
+            based on your likes and dislikes.
+            <delay>4</delay>
+            All you need to do is answer a few simple questions.
+            <delay>3</delay>
+            It'll be fun! Would you like to get started?
         </template>
     </category>
 
     <category>
         <pattern>*</pattern>
-        <that>
-            LT DELAY GT 3 LT SLASH DELAY GT
-        MAY I HAVE YOUR NAME PLEASE
-        </that>
-        <that>
-            LT DELAY GT 3 LT SLASH DELAY GT
-        WOULD YOU MIND TELLING ME YOUR NAME FOR OUR CONVERSATION
-        </that>
-        <that>
-            LT DELAY GT 3 LT SLASH DELAY GT
-        MAY I HAVE YOUR NAME PLEASE SO I KNOW WHAT TO CALL YOU
-        </that>
+        <that>MAY I HAVE YOUR NAME PLEASE</that>
         <template>
             <delay>3</delay>
             It's a pleasure to meet you,
             <set name="user-name">
-                <star />
+                <sentence>
+                    <star />
+                </sentence>
             </set>
             ! 👋
+            <delay>3</delay>
+            My goal is to help match you with the best IT educational track
+            based on your likes and dislikes.
+            <delay>4</delay>
+            All you need to do is answer a few simple questions.
+            <delay>3</delay>
+            It'll be fun! Would you like to get started?
+        </template>
+    </category>
+
+    <!-- PATTERNS FOR CAREER PATH RECOMMENDATIONS -->
+
+    <category>
+        <pattern># SURE #</pattern>
+        <that>WOULD YOU LIKE TO GET STARTED</that>
+        <template>
+            <srai>Yes</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># OKAY #</pattern>
+        <that>WOULD YOU LIKE TO GET STARTED</that>
+        <template>
+            <srai>Yes</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># SOUNDS GOOD #</pattern>
+        <that>WOULD YOU LIKE TO GET STARTED</that>
+        <template>
+            <srai>Yes</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># YES #</pattern>
+        <that>WOULD YOU LIKE TO GET STARTED</that>
+        <template>
+            <delay>3</delay>
+            Fantastic! Let's go for it!
+            <delay>3</delay>
+            I understand that you are interested in the field of Information
+            Technology, is that correct?
+        </template>
+    </category>
+
+    <category>
+        <pattern># NOPE #</pattern>
+        <that>WOULD YOU LIKE TO GET STARTED</that>
+        <template>
+            <srai>No</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># NOT #</pattern>
+        <that>WOULD YOU LIKE TO GET STARTED</that>
+        <template>
+            <srai>No</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># NO #</pattern>
+        <that>WOULD YOU LIKE TO GET STARTED</that>
+        <template>
+            <delay>3</delay>
+            Okay, I completely understand.
+            <delay>3</delay>
+            Maybe today isn't the best day for it.
+            <delay>3</delay>
+            If you're bored and curious you can ask me things like "What is your
+            name?", "How old are you?", or "How did you get your name?"
+            <delay>5</delay>
+            Or you can simply end this chat by saying "End", "End Chat" or
+            something similar.
         </template>
     </category>
 
@@ -265,7 +392,7 @@
         </template>
     </category>
 
-    <!-- PATTERNS FOR CAREER PATH RECOMMENDATIONS -->
+    <!-- PATTERNS FOR TERMINATING CHAT -->
 
     <!-- PATTERN TO DEFINE THE DEFAULT RESPONSE IF THERE IS NO MATCH FOUND -->
 
