@@ -166,8 +166,8 @@
             </set>
             ! 👋
             <delay>3</delay>
-            My goal is to help match you with the best IT educational track
-            based on your likes and dislikes.
+            My goal is to help match you with the best IT career based on your
+            likes and dislikes.
             <delay>4</delay>
             All you need to do is answer a few simple questions.
             <delay>3</delay>
@@ -188,8 +188,8 @@
             </set>
             ! 👋
             <delay>3</delay>
-            My goal is to help match you with the best IT educational track
-            based on your likes and dislikes.
+            My goal is to help match you with the best IT career based on your
+            likes and dislikes.
             <delay>4</delay>
             All you need to do is answer a few simple questions.
             <delay>3</delay>
@@ -232,7 +232,9 @@
             <delay>3</delay>
             Fantastic! Let's go for it!
             <delay>3</delay>
-            I understand that you are interested in the field of Information
+            So
+            <get name="user-name" />
+            , I understand that you are interested in the field of Information
             Technology. Is that correct?
         </template>
     </category>
@@ -269,7 +271,7 @@
             something similar.
             <delay>4</delay>
             For your reference, if you change your mind and would like to chat
-            about IT-related education tracks then you can simply say
+            about IT-related career tracks then you can simply say
         "Let's get started." or something similar.
         </template>
     </category>
@@ -321,7 +323,7 @@
         </template>
     </category>
 
-    <!-- Entry point into patterns for IT education track recommendations -->
+    <!-- Entry point into patterns for IT career track recommendations -->
     <category>
         <pattern># SURE #</pattern>
         <that>IS THAT CORRECT</that>
@@ -360,14 +362,14 @@
         <template>
             <delay>3</delay>
             Awesome!
-            <delay>2</delay>
+            <delay>3</delay>
             That's a great field to pursue.
-            <delay>2</delay>
+            <delay>3</delay>
             IT has several career options, most are in high demand, and pay
             handsomely. 🙌
             <delay>3</delay>
-            I will do my best to guide you into the best IT-related education
-            track for you.
+            I will do my best to guide you into the best IT-related career for
+            you.
             <delay>3</delay>
             Let's get the ball rolling. First question, do you enjoy
             programming?
@@ -405,15 +407,251 @@
         <template>
             <delay>3</delay>
             Nice!
-            <delay>2</delay>
+            <delay>3</delay>
             I can't say that I know how to code, but I sure do appreciate the
             fact that someone took the time to
         program me. 😋
             <delay>5</delay>
+            Okay, now onto the next question... If you had to choose, would you
+            prefer to work more with math and logic,
+        or would you prefer to work more with creative design?
         </template>
     </category>
 
-    <!-- No entry into education track recommendation patterns due to user declining -->
+    <category>
+        <pattern># LOGIC #</pattern>
+        <that>
+            IF YOU HAD TO CHOOSE WOULD YOU PREFER TO WORK MORE WITH MATH AND
+            LOGIC OR 
+        WOULD YOU PREFER TO WORK MORE WITH CREATIVE DESIGN
+        </that>
+        <template>
+            <srai>Math</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># MATH #</pattern>
+        <that>
+            IF YOU HAD TO CHOOSE WOULD YOU PREFER TO WORK MORE WITH MATH AND
+            LOGIC OR 
+        WOULD YOU PREFER TO WORK MORE WITH CREATIVE DESIGN
+        </that>
+        <template>
+            <delay>3</delay>
+            Cool! 😎
+            <delay>3</delay>
+            I quite enjoy math myself.
+            <delay>3</delay>
+            Final question... Do you have any interest in Machine Learning?
+        </template>
+    </category>
+
+    <!-- Front-End Engineer recommendation -->
+    <category>
+        <pattern># CREATIVE #</pattern>
+        <that>
+            IF YOU HAD TO CHOOSE WOULD YOU PREFER TO WORK MORE WITH MATH AND
+            LOGIC OR 
+        WOULD YOU PREFER TO WORK MORE WITH CREATIVE DESIGN
+        </that>
+        <template>
+            <srai>Art</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># DESIGN #</pattern>
+        <that>
+            IF YOU HAD TO CHOOSE WOULD YOU PREFER TO WORK MORE WITH MATH AND
+            LOGIC OR 
+        WOULD YOU PREFER TO WORK MORE WITH CREATIVE DESIGN
+        </that>
+        <template>
+            <srai>Art</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># ART #</pattern>
+        <that>
+            IF YOU HAD TO CHOOSE WOULD YOU PREFER TO WORK MORE WITH MATH AND
+            LOGIC OR 
+        WOULD YOU PREFER TO WORK MORE WITH CREATIVE DESIGN
+        </that>
+        <template>
+            <delay>3</delay>
+            Fantastic! 👍
+            <delay>3</delay>
+            Creativity is definitely not one of my strong suits, so more power
+            to yah! 👊
+            <delay>4</delay>
+            Based on your answers to my questions, I have determined that an
+            excellent career choice for you to pursue would 
+        be Front-End Engineering.
+            <delay>5</delay>
+            Front-End Engineers, or Web Developers as they are also known, have
+            the exciting job of designing web applications, mobile applications,
+            
+        and even web-based games!
+            <delay>5</delay>
+            Front-End Engineers often use a combination of programming and
+            creative skills.
+            <delay>r3</delay>
+            To find out more about the exciting career of Front-End Engineer go
+            ahead and click on this link:
+            <delay>3</delay>
+            <link>
+                <text>What does a front-end developer do?</text>
+                <url>
+                    https://www.careerexplorer.com/careers/front-end-developer/
+                </url>
+            </link>
+            <delay>3</delay>
+            If you would like to know what else I can do, you can ask "What can
+            you do?".
+            <delay>3</delay>
+            Or if you would like end this chat then you can simply say "End
+            chat", or something similar.
+        </template>
+    </category>
+
+    <!-- Data Analyst recommendation -->
+    <category>
+        <pattern># YEAH #</pattern>
+        <that>DO YOU HAVE ANY INTEREST IN MACHINE LEARNING</that>
+        <template>
+            <srai>Yes</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># YAH #</pattern>
+        <that>DO YOU HAVE ANY INTEREST IN MACHINE LEARNING</that>
+        <template>
+            <srai>Yes</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># SURE #</pattern>
+        <that>DO YOU HAVE ANY INTEREST IN MACHINE LEARNING</that>
+        <template>
+            <srai>Yes</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># YUP #</pattern>
+        <that>DO YOU HAVE ANY INTEREST IN MACHINE LEARNING</that>
+        <template>
+            <srai>Yes</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># YES #</pattern>
+        <that>DO YOU HAVE ANY INTEREST IN MACHINE LEARNING</that>
+        <template>
+            <delay>3</delay>
+            Sweet! 👌
+            <delay>3</delay>
+            Based on your answers, it sounds like a great career choice for you
+            to pursue would be Data Analytics.
+            <delay>4</delay>
+            Data Analysts are highly sought after right now the jobs pay very
+            well.
+            <delay>4</delay>
+            Data Analysts play a crucial role for most modern, data-driven
+            companies.
+            <delay>3</delay>
+            At a very high level, they help analyze trends to maximize revenues
+            and minimize costs for a company.
+            <delay>4</delay>
+            Of course, Data Analysts are responsible for much more than this.
+            <delay>3</delay>
+            To learn more about Data Analyst careers you can check out this
+            website:
+            <delay>3</delay>
+            <link>
+                <text>
+                    What is a data analyst? A key role for data-driven business
+                    decisions
+                </text>
+                <url>
+                    https://www.cio.com/article/3439818/what-is-a-data-analyst-a-key-role-for-data-driven-business-decisions.html
+                </url>
+            </link>
+            <delay>3</delay>
+            If you would like to know what else I can do, you can ask "What can
+            you do?".
+            <delay>3</delay>
+            Or if you would like end this chat then you can simply say "End
+            chat", or something similar.
+        </template>
+    </category>
+
+    <!-- Back-End Engineer recommendation -->
+    <category>
+        <pattern># NAH #</pattern>
+        <that>DO YOU HAVE ANY INTEREST IN MACHINE LEARNING</that>
+        <template>
+            <srai>No</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># NOPE #</pattern>
+        <that>DO YOU HAVE ANY INTEREST IN MACHINE LEARNING</that>
+        <template>
+            <srai>No</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># NOT REALLY #</pattern>
+        <that>DO YOU HAVE ANY INTEREST IN MACHINE LEARNING</that>
+        <template>
+            <srai>No</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># NO #</pattern>
+        <that>DO YOU HAVE ANY INTEREST IN MACHINE LEARNING</that>
+        <template>
+            <delay>3</delay>
+            Okay, that's perfectly fine!
+            <delay>3</delay>
+            Then based on the answers you've provided, I believe that the best
+            career for you to pursue would be Back-End Engineering. Yay! 🙌
+            <delay>5</delay>
+            Back-End Engineers, or Back-End Developers as they are also known,
+            have a wide variety of responsibilities, 
+        but in general they are in charge of developing and maintaining APIs,
+            databases, translation layers, etc.
+            <delay>5</delay>
+            There are a plethora of different career options within the realm of
+            back-end engineering so there will undoubtedly be something right
+            for you!
+            <delay>4</delay>
+            To learn more about the responsibilities of a back-end engineer then
+            please check out this website:
+            <delay>4</delay>
+            <link>
+                <text>What is a Back-End Developer</text>
+                <url>https://www.guru99.com/what-is-backend-developer.html</url>
+            </link>
+            <delay>3</delay>
+            If you would like to know what else I can do, you can ask "What can
+            you do?".
+            <delay>3</delay>
+            Or if you would like end this chat then you can simply say "End
+            chat" or something similar.
+        </template>
+    </category>
+
+    <!-- No entry into career recommendation patterns due to user declining -->
     <category>
         <pattern># NOPE #</pattern>
         <that>IS THAT CORRECT</that>
@@ -431,30 +669,55 @@
     </category>
 
     <category>
+        <pattern># NOT REALLY #</pattern>
+        <that>IS THAT CORRECT</that>
+        <template>
+            <srai>No</srai>
+        </template>
+    </category>
+
+    <category>
         <pattern># NO #</pattern>
         <that>IS THAT CORRECT</that>
         <template>
             <delay>3</delay>
             Oh, my mistake.
-            <delay>2</delay>
+            <delay>3</delay>
             I don't think there is much that I can help you with then,
             unfortunately.
             <delay>4</delay>
             I am specifically designed to help prospective students select the
-            best IT-related education track for them.
+            best IT-related career track for them.
             <delay>4</delay>
             I apologize for the inconvenience.
             <delay>2</delay>
             If you're bored and curious you can ask me things like "What is your
             name?", "How old are you?", or "How did you get your name?"
             <delay>5</delay>
-            Or you can end this chat simply by saying "End", "End Chat" or
+            Or you can end this chat simply by saying "End", "End chat", or
             something similar.
             <delay>4</delay>
         </template>
     </category>
 
     <!-- GENERAL CONVERSATION PATTERNS -->
+
+    <!-- Bot Capabilities -->
+    <category>
+        <pattern># CAN YOU #</pattern>
+        <template>
+            <delay>3</delay>
+            I can't do too much right now, but you can ask me things like "What
+            is your name?", "How old are you?",
+        or "How did you get your name?"
+            <delay>3</delay>
+            If you would like to start chatting about the best career track for
+            you then you can simply say "Start".
+            <delay>4</delay>
+            Or if you would like to end this chat at any time then you can say
+            "End", "End chat", or something similar.
+        </template>
+    </category>
 
     <!-- Bot Name -->
     <category>
