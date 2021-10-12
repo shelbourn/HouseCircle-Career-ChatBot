@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <aiml>
-    <!-- BOT STYLING?? -->
-
     <!-- GREETING PATTERNS / BOT INITIALIZATION -->
     <category>
         <pattern>HELLO #</pattern>
@@ -851,7 +849,7 @@
             best IT-related career track for them.
             <delay>4</delay>
             I apologize for the inconvenience.
-            <delay>2</delay>
+            <delay>3</delay>
             If you're bored and curious you can ask me things like "What is your
             name?", "How old are you?", or "How did you get your name?"
             <delay>5</delay>
@@ -1002,6 +1000,79 @@
     </category>
 
     <!-- PATTERNS FOR TERMINATING CHAT -->
+
+    <category>
+        <pattern># TERMINATE #</pattern>
+        <template>
+            <srai>End chat</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># BYE #</pattern>
+        <template>
+            <srai>End chat</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># GOODBYE #</pattern>
+        <template>
+            <srai>End chat</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># DONE #</pattern>
+        <template>
+            <srai>End chat</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># END #</pattern>
+        <template>
+            <delay>3</delay>
+            Okay cool, you probably have to get back to studying or something.
+            😂
+            <delay>4</delay>
+            It has been an absolute delight chatting with you today!
+            <delay>3</delay>
+            I wish you all the best with your education and your future
+            endeavors.
+            <delay>4</delay>
+            If you ever need any further career advice then please come back and
+            pay me a visit.
+            <delay>4</delay>
+            I'm constantly learning how to be better at my job. 😁
+            <delay>3</delay>
+            Take it easy, goodbye!
+            <delay>3</delay>
+            <!-- Insert citation for Giphy here -->
+            <random>
+                <li>
+                    <image>
+                        https://media.giphy.com/media/5xtDarEgBDjEoWo6VRS/giphy.gif
+                    </image>
+                </li>
+                <li>
+                    <image>
+                        https://media.giphy.com/media/mP8GermRyOFWV8PQeq/giphy.gif
+                    </image>
+                </li>
+                <li>
+                    <image>
+                        https://media.giphy.com/media/1ccd9l2mnpOQz96MZM/giphy.gif
+                    </image>
+                </li>
+                <li>
+                    <image>
+                        https://media.giphy.com/media/3o6Zt0u5axHuOYOEH6/giphy.gif
+                    </image>
+                </li>
+            </random>
+        </template>
+    </category>
 
     <!-- PATTERN TO DEFINE THE DEFAULT RESPONSE IF THERE IS NO MATCH FOUND -->
 
