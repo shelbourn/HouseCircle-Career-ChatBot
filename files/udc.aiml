@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <aiml>
+    <!--
+    Author: Matthew Shelbourn
+    Date: October 2021
+    "HouseCircle AI" Career ChatBot
+    WGU - C951 Task 1
+    mshelbo@wgu.edu
+    -->
+
     <!-- GREETING PATTERNS / BOT INITIALIZATION -->
     <category>
         <pattern>HELLO #</pattern>
@@ -496,7 +504,7 @@
             Front-End Engineers often use a combination of programming and
             creative skills.
             <delay>r3</delay>
-            To find out more about the exciting career of Front-End Engineer go
+            To find out more about the exciting career of Front-End Engineer, go
             ahead and click on this link:
             <delay>3</delay>
             <link>
@@ -568,7 +576,7 @@
             <delay>4</delay>
             Of course, Data Analysts are responsible for much more than this.
             <delay>3</delay>
-            To learn more about Data Analyst careers you can check out this
+            To learn more about Data Analyst careers, you can check out this
             website:
             <delay>3</delay>
             <link>
@@ -738,7 +746,7 @@
             UI/UX Designers are responsible for developing website wireframes,
             mocks, style guides, color palettes, and much, much more.
             <delay>5</delay>
-            To learn more about the exciting career of a UI/UX designer please
+            To learn more about the exciting career of a UI/UX designer, please
             take a look at this website:
             <delay>3</delay>
             <link>
@@ -792,8 +800,8 @@
             <delay>8</delay>
             In short, QA Engineers are super important members of the team!
             <delay>3</delay>
-            To read up a bit more about Quality Assurance Engineers, go ahead a
-            check out this page:
+            To read up a bit more about Quality Assurance Engineers, go ahead
+            and check out this page:
             <delay>3</delay>
             <link>
                 <text>What Does a QA Engineer Do?</text>
@@ -992,9 +1000,11 @@
             <i>THIS...</i>
             is what I was almost named after. 🙄
             <delay>4</delay>
-            <!-- Insert citation here -->
+            <!-- BEGIN CITATION
+        (Ison, National Geographic Kids 2021)
+        END CITATION -->
             <image>
-                https://media.nature.com/lw800/magazine-assets/d41586-021-02317-9/d41586-021-02317-9_19590920.jpg
+                https://i.natgeofe.com/k/a09360a8-bbe1-45fd-b337-b26a72f07132/cane-toad-grass_4x3.jpg
             </image>
         </template>
     </category>
@@ -1046,9 +1056,13 @@
             <delay>4</delay>
             I'm constantly learning how to be better at my job. 😁
             <delay>3</delay>
-            Take it easy, goodbye!
+            Take it easy, goodbye
+            <get name="user-name" />
+            !
             <delay>3</delay>
-            <!-- Insert citation for Giphy here -->
+            <!-- BEGIN CITATION
+        All links: (Giphy 2021)
+        END CITATION -->
             <random>
                 <li>
                     <image>
@@ -1095,7 +1109,9 @@
             <delay>3</delay>
             Don't worry! I'm constantly improving so try again soon!
             <delay>3</delay>
-            <!-- Insert citation for Giphy here -->
+            <!-- BEGIN CITATION
+        All links: (Giphy 2021)
+        END CITATION -->
             <random>
                 <li>
                     <image>
