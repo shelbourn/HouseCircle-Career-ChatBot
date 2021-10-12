@@ -651,6 +651,167 @@
         </template>
     </category>
 
+    <!-- Non-Programming-related career fields-->
+    <category>
+        <pattern># NAH #</pattern>
+        <that>FIRST QUESTION DO YOU ENJOY PROGRAMMING</that>
+        <template>
+            <srai>No</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># NOT REALLY #</pattern>
+        <that>FIRST QUESTION DO YOU ENJOY PROGRAMMING</that>
+        <template>
+            <srai>No</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># NOPE #</pattern>
+        <that>FIRST QUESTION DO YOU ENJOY PROGRAMMING</that>
+        <template>
+            <srai>No</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># NO #</pattern>
+        <that>FIRST QUESTION DO YOU ENJOY PROGRAMMING</that>
+        <template>
+            <delay>3</delay>
+            Okay cool, yeah programming is definitely not for everyone so I
+            completely understand. 😁
+            <delay>4</delay>
+            Next question... do you consider yourself more of a creative person
+            or more of a logical person?
+        </template>
+    </category>
+
+    <!-- UI/UX recommendation -->
+    <category>
+        <pattern># ART #</pattern>
+        <that>
+            DO YOU CONSIDER YOURSELF MORE OF A CREATIVE PERSON OR MORE OF A
+            LOGICAL PERSON
+        </that>
+        <template>
+            <srai>Creative</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># ARTISTIC #</pattern>
+        <that>
+            DO YOU CONSIDER YOURSELF MORE OF A CREATIVE PERSON OR MORE OF A
+            LOGICAL PERSON
+        </that>
+        <template>
+            <srai>Creative</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># CREATIVE #</pattern>
+        <that>
+            DO YOU CONSIDER YOURSELF MORE OF A CREATIVE PERSON OR MORE OF A
+            LOGICAL PERSON
+        </that>
+        <template>
+            <delay>3</delay>
+            Groovy! 😄
+            <delay>3</delay>
+            I'm not super creative yet, but I'm working hard on improving my
+            creative writing skills. 😂
+            <delay>4</delay>
+            Well, based on your responses to my questions I believe that an
+            excellent career option for your to pursue would be UI/UX Design.
+            <delay>5</delay>
+            UI/UX (short for User Interface / User Experience) Designers are the
+            creative powerhouse behind any piece of digital technology.
+            <delay>5</delay>
+            Their work is what creates the visual appeal of a website, or the
+            engaging interactivity of a mobile application.
+            <delay>5</delay>
+            Many people do not know that UI/UX Designers exist, but without them
+            our internet-centric lives would be very drab and mundane.
+            <delay>5</delay>
+            UI/UX Designers are responsible for developing website wireframes,
+            mocks, style guides, color palettes, and much, much more.
+            <delay>5</delay>
+            To learn more about the exciting career of a UI/UX designer please
+            take a look at this website:
+            <delay>3</delay>
+            <link>
+                <text>What Does a UI/UX Designer Do?</text>
+                <url>
+                    https://www.springboard.com/library/ui-ux-design/job-description/
+                </url>
+            </link>
+            <delay>3</delay>
+            If you would like to know what else I can do, you can ask "What can
+            you do?".
+            <delay>3</delay>
+            Or if you would like end this chat then you can simply say "End
+            chat" or something similar.
+        </template>
+    </category>
+
+    <!-- QA Engineer recommendation -->
+    <category>
+        <pattern># LOGIC #</pattern>
+        <that>
+            DO YOU CONSIDER YOURSELF MORE OF A CREATIVE PERSON OR MORE OF A
+            LOGICAL PERSON
+        </that>
+        <template>
+            <srai>Logical</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern># LOGICAL #</pattern>
+        <that>
+            DO YOU CONSIDER YOURSELF MORE OF A CREATIVE PERSON OR MORE OF A
+            LOGICAL PERSON
+        </that>
+        <template>
+            <delay>3</delay>
+            Nice, me too! 🖐
+            <delay>3</delay>
+            So I've crunched the data and, based on your answers, have
+            determined that a great career option for you to pursue would be QA
+            Engineering!
+            <delay>5</delay>
+            QA (short for Quality Assurance) Engineers play an incredibly
+            important role within any tech-focused company.
+            <delay>5</delay>
+            Their responsibilities are vast, but a few of the key things they
+            are in charge of include code quality management, bug tracking, 
+        test case development, compliance with various standards, deliverables
+            meet user expectations, and many, many more.
+            <delay>8</delay>
+            In short, QA Engineers are super important members of the team!
+            <delay>3</delay>
+            To read up a bit more about Quality Assurance Engineers, go ahead a
+            check out this page:
+            <delay>3</delay>
+            <link>
+                <text>What Does a QA Engineer Do?</text>
+                <url>
+                    https://u-tor.com/topic/what-does-qa-engineer-do#:~:text=The%20main%20goal%20of%20QA,get%20the%20results%20they%20expect).
+                </url>
+            </link>
+            <delay>3</delay>
+            If you would like to know what else I can do, you can ask "What can
+            you do?".
+            <delay>3</delay>
+            Or if you would like end this chat then you can simply say "End
+            chat" or something similar.
+        </template>
+    </category>
+
     <!-- No entry into career recommendation patterns due to user declining -->
     <category>
         <pattern># NOPE #</pattern>
