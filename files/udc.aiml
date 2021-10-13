@@ -517,7 +517,7 @@
             If you would like to know what else I can do, you can ask "What can
             you do?".
             <delay>3</delay>
-            Or if you would like end this chat then you can simply say "End
+            Or if you would like to end this chat then you can simply say "End
             chat", or something similar.
         </template>
     </category>
@@ -592,7 +592,7 @@
             If you would like to know what else I can do, you can ask "What can
             you do?".
             <delay>3</delay>
-            Or if you would like end this chat then you can simply say "End
+            Or if you would like to end this chat then you can simply say "End
             chat", or something similar.
         </template>
     </category>
@@ -652,7 +652,7 @@
             If you would like to know what else I can do, you can ask "What can
             you do?".
             <delay>3</delay>
-            Or if you would like end this chat then you can simply say "End
+            Or if you would like to end this chat then you can simply say "End
             chat" or something similar.
         </template>
     </category>
@@ -690,8 +690,6 @@
             Okay cool, yeah programming is definitely not for everyone so I
             completely understand. 😁
             <delay>4</delay>
-            Next question... do you consider yourself more of a creative person
-            or more of a logical person?
         </template>
     </category>
 
@@ -759,7 +757,7 @@
             If you would like to know what else I can do, you can ask "What can
             you do?".
             <delay>3</delay>
-            Or if you would like end this chat then you can simply say "End
+            Or if you would like to end this chat then you can simply say "End
             chat" or something similar.
         </template>
     </category>
@@ -813,7 +811,7 @@
             If you would like to know what else I can do, you can ask "What can
             you do?".
             <delay>3</delay>
-            Or if you would like end this chat then you can simply say "End
+            Or if you would like to end this chat then you can simply say "End
             chat" or something similar.
         </template>
     </category>
