@@ -299,7 +299,7 @@
     </category>
 
     <category>
-        <pattern># GOING #</pattern>
+        <pattern># GET GOING #</pattern>
         <template>
             <srai>Start</srai>
         </template>
