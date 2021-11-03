@@ -24,6 +24,7 @@
             <srai>HI</srai>
         </template>
     </category>
+    <!-- Testing -->
 
     <category>
         <pattern>HOWDY #</pattern>
