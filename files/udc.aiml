@@ -31,7 +31,7 @@
             <srai>HI</srai>
         </template>
     </category>
-
+    <!-- Test -->
     <category>
         <pattern>HOW ARE #</pattern>
         <template>
